@@ -1,0 +1,29 @@
+// https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum FruitName {
+  apple
+  banana
+  orange
+}
+
+type Fruit {
+  fruit       FruitName
+  price       Int
+  description String?
+  dateSold    DateTime
+  received    Boolean
+}
+
+model FruitOrders {
+  id    String  @id @default(auto()) @map("_id") @db.ObjectId
+  fruit Fruit[]
+}

@@ -1,0 +1,17 @@
+{
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "target": "es2015",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true
+  }
+}
