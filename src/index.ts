@@ -1,11 +1,11 @@
 import type { DMMF } from "@prisma/generator-helper";
 import { getDMMF } from "@prisma/internals";
 
-interface ConverterOptions {
+export interface ConverterOptions {
   indentation: number;
 }
 
-const defaultOptions: ConverterOptions = {
+export const defaultOptions: ConverterOptions = {
   indentation: 4,
 };
 
