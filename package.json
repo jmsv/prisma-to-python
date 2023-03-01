@@ -1,7 +1,11 @@
 {
   "name": "prisma-to-python",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Parse prisma.schema files and output models as Python classes",
+  "keywords": [
+    "prisma",
+    "python"
+  ],
   "main": "dist/index.js",
   "files": [
     "dist"
