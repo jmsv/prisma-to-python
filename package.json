@@ -1,6 +1,6 @@
 {
   "name": "prisma-to-python",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Parse prisma.schema files and output models as Python classes",
   "keywords": [
     "prisma",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@prisma/generator-helper": "^4.11.0",
     "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.2",
     "rimraf": "^4.1.2",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^4.9.5"

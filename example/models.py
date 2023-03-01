@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Enums
 
-class FruitName(Enum):
+class FruitName(str, Enum):
     APPLE = "apple"
     BANANA = "banana"
     ORANGE = "orange"

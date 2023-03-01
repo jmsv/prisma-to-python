@@ -73,7 +73,7 @@ export class PrismaToPythonConverter {
           .join("\n");
 
         this.imports.push({ from: "enum", import: "Enum" });
-        return `class ${name}(Enum):\n${values}`;
+        return `class ${name}(str, Enum):\n${values}`;
       })
       .join("\n\n");
   };
