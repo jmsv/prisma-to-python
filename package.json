@@ -2,27 +2,27 @@
   "name": "prisma-to-python",
   "version": "0.1.3",
   "description": "Parse prisma.schema files and output models as Python classes",
-  "keywords": [
-    "prisma",
-    "python"
-  ],
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
   "types": "dist/index.d.ts",
   "bin": {
     "prisma-to-python": "dist/cli.js"
   },
-  "repository": "git@github.com:jmsv/prisma-to-python.git",
-  "homepage": "https://github.com/jmsv/prisma-to-python#readme",
-  "author": "James Vickery <dev@jmsv.me>",
-  "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc && chmod +x dist/cli.js",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "prisma",
+    "python"
+  ],
+  "repository": "git@github.com:jmsv/prisma-to-python.git",
+  "homepage": "https://github.com/jmsv/prisma-to-python#readme",
+  "author": "James Vickery <dev@jmsv.me>",
+  "license": "MIT",
   "dependencies": {
     "@prisma/internals": "^4.11.0",
     "commander": "^10.0.0"
