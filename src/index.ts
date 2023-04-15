@@ -91,8 +91,11 @@ export class PrismaToPythonConverter {
             let type = f.type;
             if (f.kind === "scalar") {
               type = getScalarType(f.type);
+
               if (type === "datetime") {
                 this.imports.push({ from: "datetime", import: "datetime" });
+              } else if (type === "Any") {
+                this.imports.push({ from: "typing", import: "Any" });
               }
             }
             if (f.isList) type = `list[${type}]`;
@@ -132,11 +135,12 @@ const getScalarType = (scalar: string) => {
     Int: "int",
     Boolean: "bool",
     DateTime: "datetime",
+    Json: "Any",
   };
 
   const type = scalarTypeMap[scalar];
 
-  if (!type) throw new Error(`Unknown scalar type: ${type}`);
+  if (!type) throw new Error(`Unknown scalar type: ${scalar}`);
 
   return type;
 };
